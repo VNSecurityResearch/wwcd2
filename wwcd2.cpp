@@ -124,7 +124,7 @@ static int idaapi processor_extension_callback(void * /*user_data*/, int event_i
 		char buf[MAXSTR];
 		init_output_buffer(buf, sizeof(buf));
 		cs_insn *insn;
-		char temp[32] = "";
+		char temp[MAXSTR] = "";
 		std::string result;
 		size_t count = cs_disasm(handle, (uint8_t *)&code, size, ea, 1, &insn);
 
